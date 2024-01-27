@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 107388905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 778948922}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107388905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +805,7 @@ GameObject:
   - component: {fileID: 550773101}
   - component: {fileID: 550773100}
   m_Layer: 5
-  m_Name: Button
+  m_Name: End Turn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,7 +874,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 550773101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 778948922}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextTurnButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &550773101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +1007,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 645005492}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 778948922}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &645005492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,6 +1213,7 @@ GameObject:
   - component: {fileID: 778948920}
   - component: {fileID: 778948919}
   - component: {fileID: 778948918}
+  - component: {fileID: 778948922}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1274,6 +1311,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &778948922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778948917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26187a61ec708044f89db1229eaed46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameState: 1
+  turnNumber: 1
+  publicOpinionScore: 15
+  legalTroubleScore: 15
+  furtherInfoIndex:
+  - {fileID: 11400000, guid: 5378d28492cb78d4a8fd008c80e3c479, type: 2}
+  - {fileID: 11400000, guid: 99f4db6c068113e4db00f55ba71be588, type: 2}
+  - {fileID: 11400000, guid: 799db8bb4108c0d4c8d8ccdd6f9c0333, type: 2}
+  - {fileID: 11400000, guid: a5d9b0d38b4298e4fb6cf2dcdb9de04e, type: 2}
+  - {fileID: 11400000, guid: 32cf4894d47932b439fecee974d4e1bd, type: 2}
+  - {fileID: 11400000, guid: 3d21b90c7b3b3734689e2a5210ac3f2a, type: 2}
+  - {fileID: 11400000, guid: 44190d5069feaae41b84e0c4b50b18c2, type: 2}
+  - {fileID: 11400000, guid: 7adae759f74db524ba4bd240093eaed1, type: 2}
+  - {fileID: 11400000, guid: 29a221e765129df43916c194d377ba37, type: 2}
+  cardIndex:
+  - {fileID: 11400000, guid: 6fc94ff3721ace14daf1803de829f2bd, type: 2}
+  - {fileID: 11400000, guid: 4e7ca0ecdd5f52848b8e7cfb06cf58bf, type: 2}
+  - {fileID: 11400000, guid: 4abaeefc3a14f934294561a7412a105d, type: 2}
+  - {fileID: 11400000, guid: 71ba3bba0c2da2d4aa1d8972d86a7d02, type: 2}
+  - {fileID: 11400000, guid: b95b54bc7f3d0f84fa3af0d8ebe869b9, type: 2}
+  - {fileID: 11400000, guid: 6079b1b26bba94b4b82c6b8688131563, type: 2}
+  - {fileID: 11400000, guid: 6a6481eb8532d814e90bf5a2b25e33db, type: 2}
+  - {fileID: 11400000, guid: 0c642e12efa11d74c9e446a47f488558, type: 2}
+  - {fileID: 11400000, guid: 7ff64045c99aa5b459724c7264fc7f8d, type: 2}
+  - {fileID: 11400000, guid: 50203d164589e29418eb4e9d72d5629c, type: 2}
+  - {fileID: 11400000, guid: 106ddea119fb8ce4c8fa9d4cce7ac57c, type: 2}
+  - {fileID: 11400000, guid: 388055f56d7b07540a2637a2d470038f, type: 2}
+  - {fileID: 11400000, guid: 184be13d8d181424ea11c2acd302ea5a, type: 2}
+  - {fileID: 11400000, guid: 2a0c97e218b66a14893b57db7b81b71c, type: 2}
+  - {fileID: 11400000, guid: 95cc003cc9e8f4749a93289829aaa741, type: 2}
+  - {fileID: 11400000, guid: f983bcd383bbeb64c80482a9d7ccb165, type: 2}
+  - {fileID: 11400000, guid: 136658d3174f0d74f9b374e3228ec2b0, type: 2}
+  - {fileID: 11400000, guid: 1658e142b4d886840b28446136426c3f, type: 2}
+  - {fileID: 11400000, guid: 286ed4c952f178f43867dd889c462262, type: 2}
+  - {fileID: 11400000, guid: 2d4abfd7bc33eb4458e661eea0ce16ec, type: 2}
+  - {fileID: 11400000, guid: 8c22129f92b30a2419ef06ccf047da7d, type: 2}
+  - {fileID: 11400000, guid: c46933af349e9064a9e4bf27e7ccd935, type: 2}
+  - {fileID: 11400000, guid: 89b2bb8902a344443b8a85e9b053e3cb, type: 2}
+  - {fileID: 11400000, guid: c6f43b8f44141b24199b279ab2fab9d8, type: 2}
+  - {fileID: 11400000, guid: 96d3190e8436228478035a7b189ccfbe, type: 2}
+  - {fileID: 11400000, guid: 8b793834def2fd74ca08b7bf21e6f849, type: 2}
+  - {fileID: 11400000, guid: 34bd72932f7703f4393a232c35f237a5, type: 2}
+  - {fileID: 11400000, guid: 0e5ea6a4653c47b43996df6b609aed31, type: 2}
+  - {fileID: 11400000, guid: 128c3c770e1a1234d98d9925943566ca, type: 2}
+  - {fileID: 11400000, guid: 7a172b39e3e39d244b42b51c781b5a1a, type: 2}
 --- !u!1 &869082678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 968769300}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 778948922}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &968769300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,7 +2395,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1533173889}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 778948922}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1533173889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2387,14 +2505,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2407,7 +2525,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -2438,7 +2556,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
@@ -2521,14 +2639,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2572,7 +2690,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
@@ -2805,14 +2923,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2856,7 +2974,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
