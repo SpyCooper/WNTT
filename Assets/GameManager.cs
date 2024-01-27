@@ -31,14 +31,23 @@ public class GameManager : MonoBehaviour
 
     Transform[] cardObjects = new Transform[4]; // References to the UI Buttons representing cards
 
+    Image publicOpinionMeter;
+    Image legalTroubleMeter;
+
     void Start()
     {
         gameState = GameState.InfoPhase;
         Debug.Log("Now in InfoPhase, turn " + turnNumber);
 
-        for (int i = 1; i < 5; i++)
+        // Object References
         {
-            cardObjects[i-1] = transform.GetChild(4).GetChild(i); // Auto-Assign Card Object references
+            for (int i = 0; i < 4; i++)
+            {
+                cardObjects[i] = transform.GetChild(4).GetChild(1).GetChild(i);
+
+            }
+            publicOpinionMeter = transform.GetChild(3).GetChild(0).GetChild(0).GetComponentInChildren<Image>();
+            legalTroubleMeter = transform.GetChild(3).GetChild(1).GetChild(0).GetComponentInChildren<Image>();
         }
 
         deck = cardIndex;
@@ -51,6 +60,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void UpdateMeters()
+    {
+        publicOpinionMeter.fillAmount = publicOpinionScore / 30;
+        legalTroubleMeter.fillAmount = legalTroubleScore / 30;
+
+        Debug.Log("Meters Updated.");
     }
 
     void ShuffleDeck()
@@ -116,7 +133,7 @@ public class GameManager : MonoBehaviour
 
         foreach (Transform currentCardObject in cardObjects)
         {
-            currentCardObject.GetComponentInChildren<TMP_Text>().text = deck[0].cardName;
+            // currentCardObject.GetComponentInChildren<TMP_Text>().text = deck[0].cardName;
             
             discard.Insert(0, deck[0]);
             hand.Add(deck[0]);
@@ -140,6 +157,7 @@ public class GameManager : MonoBehaviour
         }
 
         cardsSelected.Clear();
+        UpdateMeters();
 
         NextPhase();
     }
@@ -169,7 +187,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameState != GameState.MainPhase) return; // Only possible in Main Phase
 
-        if (cardsSelected.Contains(hand[cardIndex])) // Deselction
+        if (cardsSelected.Contains(hand[cardIndex])) // Deselection
         {
             cardsSelected.Remove(hand[cardIndex]);
             Debug.Log(hand[cardIndex].cardName + " deselected.");
