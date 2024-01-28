@@ -16,3 +16,5 @@ MonoBehaviour:
   cardType: 0
   publicOpinionEffect: -2
   legalTroubleEffect: -2
+  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: e5fb9af52405f16489587a313141223d, type: 3}

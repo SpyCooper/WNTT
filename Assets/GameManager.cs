@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
     Slider publicOpinionMeter;
     Slider legalTroubleMeter;
 
+    [SerializeField] private Animator deckAnimator;
+    private string drawCardsTriggerName = "PullCards";
+
     private void Awake()
     {
         Instance = this;
@@ -62,13 +65,19 @@ public class GameManager : MonoBehaviour
         deck = cardIndex;
         ShuffleDeck();
 
-        NextPhase();
+
+        // Starts and runs the game
+        StartGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StartGame()
     {
-        
+        //for(int i = 0;i < 4;i++)
+        //{
+
+        //}
+
+        NextPhase();
     }
 
     void UpdateMeters()
@@ -137,9 +146,12 @@ public class GameManager : MonoBehaviour
 
     void DrawFour()
     {
+        deckAnimator.SetTrigger(drawCardsTriggerName);
+
         discard.AddRange(hand);
         hand.Clear();
 
+        int iteration = 0;
         foreach (Transform currentCardObject in cardObjects)
         {
             // currentCardObject.GetComponentInChildren<TMP_Text>().text = deck[0].cardName;
@@ -147,10 +159,14 @@ public class GameManager : MonoBehaviour
             discard.Insert(0, deck[0]);
             hand.Add(deck[0]);
             deck.RemoveAt(0);
+            
+            currentCardObject.GetChild(1).GetComponent<Image>().sprite = hand[iteration].cardSprite;
 
             Debug.Log(hand[hand.Count - 1] + " drawn.");
+            iteration++;
         }
 
+        deckAnimator.ResetTrigger(drawCardsTriggerName);
         NextPhase();
     }
 
@@ -189,7 +205,7 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        Debug.Log("Game end.");
+        EndOfGame.Instance.GameEnded();
     }
 
     public void CardSelected(int cardIndex)
@@ -214,6 +230,15 @@ public class GameManager : MonoBehaviour
         if (cardsSelected.Count < 1) return; // At least 1 card
 
         NextPhase();
+    }
+
+    public float GetPublicOpinionNormalized()
+    {
+        return publicOpinionScore / publicOpinionMeter.maxValue;
+    }
+    public float GetLegalTroubleNormalized()
+    {
+        return legalTroubleScore / legalTroubleMeter.maxValue;
     }
 
     public enum GameState
