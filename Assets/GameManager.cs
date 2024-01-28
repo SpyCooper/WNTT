@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
 
     Transform[] cardObjects = new Transform[4]; // References to the UI Buttons representing cards
 
-    Image publicOpinionMeter;
-    Image legalTroubleMeter;
+    Slider publicOpinionMeter;
+    Slider legalTroubleMeter;
 
     void Start()
     {
@@ -46,10 +46,11 @@ public class GameManager : MonoBehaviour
                 cardObjects[i] = transform.GetChild(4).GetChild(1).GetChild(i);
 
             }
-            publicOpinionMeter = transform.GetChild(3).GetChild(0).GetChild(0).GetComponentInChildren<Image>();
-            legalTroubleMeter = transform.GetChild(3).GetChild(1).GetChild(0).GetComponentInChildren<Image>();
+            publicOpinionMeter = transform.GetChild(3).GetChild(0).GetComponentInChildren<Slider>();
+            legalTroubleMeter = transform.GetChild(3).GetChild(1).GetComponentInChildren<Slider>();
         }
 
+        UpdateMeters();
         deck = cardIndex;
         ShuffleDeck();
 
@@ -64,8 +65,8 @@ public class GameManager : MonoBehaviour
 
     void UpdateMeters()
     {
-        publicOpinionMeter.fillAmount = publicOpinionScore / 30;
-        legalTroubleMeter.fillAmount = legalTroubleScore / 30;
+        publicOpinionMeter.value = publicOpinionScore;
+        legalTroubleMeter.value =  legalTroubleScore;
 
         Debug.Log("Meters Updated.");
     }
@@ -183,7 +184,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game end.");
     }
 
-    public void CardSelected(int cardIndex) // Card index read R to L in UI (3, 2, 1, 0)
+    public void CardSelected(int cardIndex)
     {
         if (gameState != GameState.MainPhase) return; // Only possible in Main Phase
 
