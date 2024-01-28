@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     public GameState gameState;
     public int turnNumber = 1;
 
@@ -33,6 +36,11 @@ public class GameManager : MonoBehaviour
 
     Slider publicOpinionMeter;
     Slider legalTroubleMeter;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -213,6 +221,7 @@ public class GameManager : MonoBehaviour
         InfoPhase,
         DrawPhase,
         MainPhase,
-        EndPhase
+        EndPhase,
+        Paused,
     }
 }
