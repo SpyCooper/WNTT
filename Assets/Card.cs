@@ -13,6 +13,4 @@ public class Card : ScriptableObject
     public int legalTroubleEffect;
 
     public string cardDescription;
-
-    public Sprite cardSprite;
 }
