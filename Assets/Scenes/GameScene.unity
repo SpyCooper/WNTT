@@ -207,9 +207,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
-  m_WholeNumbers: 1
-  m_Value: 5
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.51
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1409,6 +1409,8 @@ GameObject:
   - component: {fileID: 298855223}
   - component: {fileID: 298855222}
   - component: {fileID: 298855221}
+  - component: {fileID: 298855224}
+  - component: {fileID: 298855225}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -1479,19 +1481,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 298855222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 778948922}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CardSelected
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &298855222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,6 +1520,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298855219}
   m_CullTransparentMesh: 1
+--- !u!114 &298855224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298855219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58911b2ab8226084faa59b24476b8717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &298855225
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298855219}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &339449296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1640,8 @@ GameObject:
   - component: {fileID: 397364796}
   - component: {fileID: 397364795}
   - component: {fileID: 397364794}
+  - component: {fileID: 397364797}
+  - component: {fileID: 397364798}
   m_Layer: 5
   m_Name: Card (1)
   m_TagString: Untagged
@@ -1687,19 +1712,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397364795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 778948922}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CardSelected
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &397364795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,6 +1751,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397364792}
   m_CullTransparentMesh: 1
+--- !u!114 &397364797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397364792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58911b2ab8226084faa59b24476b8717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &397364798
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397364792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &434918872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,8 +1966,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1349848891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.546, y: 0}
+  m_AnchorMax: {x: 0.546, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2304,6 +2350,8 @@ GameObject:
   - component: {fileID: 536664614}
   - component: {fileID: 536664613}
   - component: {fileID: 536664612}
+  - component: {fileID: 536664615}
+  - component: {fileID: 536664616}
   m_Layer: 5
   m_Name: Card (3)
   m_TagString: Untagged
@@ -2328,7 +2376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 200, y: 1}
   m_SizeDelta: {x: 70, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536664612
@@ -2374,19 +2422,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536664613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 778948922}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CardSelected
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &536664613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,6 +2461,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536664610}
   m_CullTransparentMesh: 1
+--- !u!114 &536664615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536664610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58911b2ab8226084faa59b24476b8717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &536664616
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536664610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55789be1c7229ee479667f279cd76263, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &550773098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,7 +3311,7 @@ RectTransform:
   m_Father: {fileID: 885574802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.546, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5586,9 +5655,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
-  m_WholeNumbers: 1
-  m_Value: 5
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.51
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5604,6 +5673,8 @@ GameObject:
   - component: {fileID: 1624602663}
   - component: {fileID: 1624602662}
   - component: {fileID: 1624602661}
+  - component: {fileID: 1624602664}
+  - component: {fileID: 1624602665}
   m_Layer: 5
   m_Name: Card (2)
   m_TagString: Untagged
@@ -5674,19 +5745,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1624602662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 778948922}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CardSelected
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1624602662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5725,6 +5784,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624602659}
   m_CullTransparentMesh: 1
+--- !u!114 &1624602664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624602659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58911b2ab8226084faa59b24476b8717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1624602665
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624602659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1627736155
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,7 +6238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1814936626
 RectTransform:
   m_ObjectHideFlags: 0
