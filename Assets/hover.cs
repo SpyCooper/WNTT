@@ -7,19 +7,20 @@ public class hover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     int UILayer;
     Vector2 yes;
-
+    Animator animator;
     private void Start()
     {
         yes = transform.position;
+        animator = GetComponent<Animator>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.position = new Vector2(transform.position.x, yes.y + 1);
+        animator.Play("Card up");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.position = yes;
+        animator.Play("Card down");
     }
 }
