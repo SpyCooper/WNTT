@@ -7,6 +7,7 @@ public class SettingsManager : MonoBehaviour
 {
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button resumeButton;
+    [SerializeField] private Button creditsButton;
     [SerializeField] private Button mainMenuButton;
     private GameManager.GameState previousGameState;
     [SerializeField] private GameObject settingsMenu;
@@ -18,6 +19,9 @@ public class SettingsManager : MonoBehaviour
         });
         resumeButton.onClick.AddListener(() => {
             CloseSettingsMenu();
+        });
+        creditsButton.onClick.AddListener(() => {
+            Credits.Instance.ShowCredits();
         });
         mainMenuButton.onClick.AddListener(() => {
             Loader.Load(Loader.Scene.MainMenu);

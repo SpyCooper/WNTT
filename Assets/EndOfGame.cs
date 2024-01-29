@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+//using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,8 +45,6 @@ public class EndOfGame : MonoBehaviour
 
     public void GameEnded()
     {
-        EndOfGameScreen.SetActive(true);
-
         POSlider.value = GameManager.Instance.GetPublicOpinionNormalized();
         if (POSlider.value <= .3)
         {
@@ -74,8 +73,12 @@ public class EndOfGame : MonoBehaviour
             LTScoreText.text = highLTText;
         }
 
-
-
+        EndOfGameScreen.SetActive(true);
         animator.SetTrigger(animatorTriggerText);
+    }
+
+    public void ShowEOGScreen()
+    {
+        EndOfGameScreen.SetActive(true);
     }
 }

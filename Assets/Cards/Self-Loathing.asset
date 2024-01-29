@@ -18,3 +18,4 @@ MonoBehaviour:
   legalTroubleEffect: -2
   cardDescription: 
   cardSprite: {fileID: 21300000, guid: 66018be3562b58841aa82a1aed02cf9e, type: 3}
+  characterSpriteChange: 1

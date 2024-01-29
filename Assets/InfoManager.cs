@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 
 public class InfoManager : MonoBehaviour
 {
+    public static InfoManager Instance { get; private set; }
+
     [SerializeField] Animator animator;
 
     [SerializeField] private GameObject topicObject;
@@ -28,6 +30,11 @@ public class InfoManager : MonoBehaviour
     private string newInfo4AddedTriggerName = "NewInfo4Added";
     [SerializeField] private TextMeshProUGUI info4Text;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         topicObject.SetActive(false);
@@ -39,15 +46,17 @@ public class InfoManager : MonoBehaviour
 
     public void AddTopic(string text)
     {
-        topicText.text = text;
+        //Debug.Log(text);
         topicObject.SetActive(true);
+        topicText.text = text;
         animator.SetTrigger(topicAddedTriggerName);
     }
 
     public void AddNewInfo1(string text)
     {
-        info1Text.text = text;
+        Debug.Log(text);
         newInfo1Object.SetActive(true);
+        info1Text.text = text;
         animator.SetTrigger(newInfo1AddedTriggerName);
     }
 

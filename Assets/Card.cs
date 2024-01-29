@@ -15,4 +15,13 @@ public class Card : ScriptableObject
     public string cardDescription;
 
     public Sprite cardSprite;
+    public CharacterSprite characterSpriteChange;
+}
+
+public enum CharacterSprite
+{
+    talking,
+    crying,
+    shocked,
+    neutral,
 }
